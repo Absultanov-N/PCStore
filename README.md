@@ -55,3 +55,16 @@ The patterns are used for separate responsibilities and cooperate in the PC purc
 A purchased cart line is stored in `order_items`. Its physical component details are stored as immutable checkout-time snapshots in `order_item_components`, including a standalone product (one component snapshot) or a PC configuration (multiple component snapshots). These descriptive snapshots are not added to the order subtotal a second time.
 
 SQLite performs stock deductions, order insertion, line insertion and component snapshot insertion in one transaction. The repository returns the committed stock levels; the in-memory Product objects are synchronized from those values only after commit. If a required item is unavailable, the database transaction rolls back and no order is persisted.
+
+## Team Contributions
+
+### Nurdaulet Absultanov
+- Builder Pattern
+- Strategy Pattern
+- Observer Pattern
+
+### Aisamal Tolemuratova
+- Factory Method Pattern
+- Decorator Pattern
+- Facade Pattern
+
